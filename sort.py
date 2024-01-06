@@ -16,7 +16,7 @@ def mean_squared_error(img1_fft, img2_fft):
     return np.mean(np.square(magnitude_difference))
 
 def band_energy(img_fft):
-    return np.sum(img_fft)
+    return np.sum(np.square(img_fft))
 
 def apply_bandpass_filter(image, low_cutoff, high_cutoff):
     rows, cols = image.shape
